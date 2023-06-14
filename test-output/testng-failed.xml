@@ -6,7 +6,7 @@
       <class name="automation.Saucelab">
         <methods>
           <include name="setUp"/>
-          <include name="addtocart"/>
+          <include name="inputvalidations" invocation-numbers="1"/>
         </methods>
       </class> <!-- automation.Saucelab -->
     </classes>

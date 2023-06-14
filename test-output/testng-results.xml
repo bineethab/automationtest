@@ -1,20 +1,121 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-06-13T16:11:41 IST" name="Default suite" finished-at="2023-06-13T16:11:45 IST" duration-ms="3435">
+  <suite started-at="2023-06-14T12:18:55 IST" name="Default suite" finished-at="2023-06-14T12:19:04 IST" duration-ms="9385">
     <groups>
     </groups>
-    <test started-at="2023-06-13T16:11:41 IST" name="Default test" finished-at="2023-06-13T16:11:45 IST" duration-ms="3435">
+    <test started-at="2023-06-14T12:18:55 IST" name="Default test" finished-at="2023-06-14T12:19:04 IST" duration-ms="9385">
       <class name="automation.Saucelab">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:automation.Saucelab@26d9b808]" started-at="2023-06-13T16:11:41 IST" name="setUp" finished-at="2023-06-13T16:11:43 IST" duration-ms="2233" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:automation.Saucelab@2cf3d63b]" started-at="2023-06-14T12:18:55 IST" name="setUp" finished-at="2023-06-14T12:18:57 IST" duration-ms="2181" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="addtocart()[pri:0, instance:automation.Saucelab@26d9b808]" started-at="2023-06-13T16:11:43 IST" name="addtocart" finished-at="2023-06-13T16:11:44 IST" duration-ms="1175" status="PASS">
+        <test-method signature="inputvalidations(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:automation.Saucelab@2cf3d63b]" started-at="2023-06-14T12:18:57 IST" name="inputvalidations" data-provider="credentials" finished-at="2023-06-14T12:18:58 IST" duration-ms="1493" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[bothcorrect]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[standard_user]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[secret_sauce]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addtocart -->
+        </test-method> <!-- inputvalidations -->
+        <test-method signature="inputvalidations(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:automation.Saucelab@2cf3d63b]" started-at="2023-06-14T12:18:58 IST" name="inputvalidations" data-provider="credentials" finished-at="2023-06-14T12:19:00 IST" duration-ms="1349" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[bothincorrect]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[user]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[user]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- inputvalidations -->
+        <test-method signature="inputvalidations(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:automation.Saucelab@2cf3d63b]" started-at="2023-06-14T12:19:00 IST" name="inputvalidations" data-provider="credentials" finished-at="2023-06-14T12:19:01 IST" duration-ms="1373" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[incorrectusername]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[standard]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[secret_sauce]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- inputvalidations -->
+        <test-method signature="inputvalidations(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:automation.Saucelab@2cf3d63b]" started-at="2023-06-14T12:19:01 IST" name="inputvalidations" data-provider="credentials" finished-at="2023-06-14T12:19:02 IST" duration-ms="1461" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[incorrectpassword]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[standard_user]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[secret]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- inputvalidations -->
+        <test-method signature="inputvalidations(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:automation.Saucelab@2cf3d63b]" started-at="2023-06-14T12:19:02 IST" name="inputvalidations" data-provider="credentials" finished-at="2023-06-14T12:19:04 IST" duration-ms="1487" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[differentusername]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[problem_user]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[secret_sauce]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- inputvalidations -->
       </class> <!-- automation.Saucelab -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

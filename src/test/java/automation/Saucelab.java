@@ -8,7 +8,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -41,45 +43,55 @@ public void Login() {
          System.out.println("Test Failed");
      }
     
-    
-	
-	
-	
+    	
 }
+@Test(dataProvider="credentials")
+public void  inputvalidations(String conditions,String username,String password) {
+	WebDriverManager.chromedriver().setup();
+	driver = new ChromeDriver();
+	driver.get("https://www.saucedemo.com/");
+	driver.findElement(By.id("user-name")).sendKeys(username);
+	driver.findElement(By.xpath("//*[@id=\"password\"]")).sendKeys(password);
+	driver.findElement(By.id("login-button")).click();
+	
+	
+	if(conditions.equals("bothcorrect")) {
+		WebElement account=driver.findElement(By.xpath("//*[@id=\"header_container\"]/div[2]/span"));
+		Assert.assertTrue(account.isDisplayed());
+	}
+	else if(conditions.equals("bothincorrect")){
+		String errorMessage=driver.findElement(By.xpath("//*[@id=\"login_button_container\"]/div/form/div[3]/h3")).getText();
+		Assert.assertEquals(errorMessage, "Epic sadface: Username and password do not match any user in this service");
+	
+	}
+	
+	else if(conditions.equals("incorrectusername")){
+		String errorMessage=driver.findElement(By.xpath("//*[@id=\"login_button_container\"]/div/form/div[3]/h3")).getText();
+		Assert.assertEquals(errorMessage, "Epic sadface: Username and password do not match any user in this service");
+	
+	}
+	else if(conditions.equals("incorrectpassword")){
+		String errorMessage=driver.findElement(By.xpath("//*[@id=\"login_button_container\"]/div/form/div[3]/h3")).getText();
+		Assert.assertEquals(errorMessage,"Epic sadface: Username and password do not match any user in this service");
+}
+	else if(conditions.equals("differentusername")){
+		WebElement account=driver.findElement(By.xpath("//*[@id=\"header_container\"]/div[2]/span"));
+		Assert.assertTrue(account.isDisplayed());
+	}}
+
+@DataProvider(name="credentials")
+public Object[][] getData() {
+	
+return new Object[][] {
+	{"bothcorrect","standard_user","secret_sauce"},
+	{"bothincorrect","user","user"},
+	{"incorrectusername","standard","secret_sauce"},
+	{"incorrectpassword","standard_user","secret"},
+	{"differentusername","problem_user","secret_sauce"},
+};
+}
+
 //@Test
-public void IncorrectCredentials() {
-	
-	    
-	   driver.findElement(By.id("user-name")).sendKeys("user");
-	    driver.findElement(By.xpath("//*[@id=\"password\"]")).sendKeys("password");     
-	    driver.findElement(By.id("login-button")).click();
-
-	    String actualUrl="https://www.saucedemo.com/inventory.html"; 
-	    String expectedUrl= driver.getCurrentUrl(); 
-	    if(actualUrl.equalsIgnoreCase(expectedUrl)) { 
-	    System.out.println("Test passed"); 
-	    } 
-	    else { System.out.println("Test failed"); 
-	    } }   
-	     
-	
-
-	//@Test
-	public void CorrectCredentials(){
-	    driver.findElement(By.id("user-name")).sendKeys("standard_user");
-	    driver.findElement(By.xpath("//*[@id=\"password\"]")).sendKeys("secret_sauce");
-	    driver.findElement(By.id("login-button")).click();
-
-	    String actualUrl="https://www.saucedemo.com/inventory.html"; 
-	    String expectedUrl= driver.getCurrentUrl(); 
-	    if(actualUrl.equalsIgnoreCase(expectedUrl)) { 
-	    System.out.println("Test passed"); 
-	    } 
-	    else { System.out.println("Test failed"); 
-	    } }   
-	    
-	
-@Test
 public void addtocart() throws InterruptedException {
 driver.findElement(By.id("user-name")).sendKeys("standard_user");
 driver.findElement(By.xpath("//*[@id=\"password\"]")).sendKeys("secret_sauce");
@@ -91,6 +103,7 @@ a.selectByVisibleText("Price (low to high)");
 WebElement element1=driver.findElement(By.xpath("//*[@id=\"add-to-cart-sauce-labs-backpack\"]"));
 WebElement element2=driver.findElement(By.xpath("//*[@id=\"add-to-cart-sauce-labs-bike-light\"]"));
 WebElement element3=driver.findElement(By.xpath("//*[@id=\"add-to-cart-sauce-labs-bolt-t-shirt\"]"));
+
 WebElement element4=driver.findElement(By.xpath("//*[@id=\"add-to-cart-sauce-labs-fleece-jacket\"]"));
 WebElement element5=driver.findElement(By.xpath("//*[@id=\"add-to-cart-sauce-labs-onesie\"]"));
 WebElement element6=driver.findElement(By.xpath("//*[@id=\"add-to-cart-test.allthethings()-t-shirt-(red)\"]"));
@@ -107,20 +120,20 @@ Action seriesOfActions = (Action) action.keyDown(Keys.CONTROL)
 seriesOfActions.perform();
 Thread.sleep(3000);
 
-/**
- * driver.findElement(By.id("checkout")).click(); Thread.sleep(1000);
- * driver.findElement(By.id("first-name")).sendKeys("bini");
- * driver.findElement(By.id("last-name")).sendKeys("b");
- * driver.findElement(By.xpath("//*[@id=\"postal-code\"]")).sendKeys("695584");
- * 
- * driver.findElement(By.xpath("//*[@id=\"continue\"]")).click();
- * 
- * driver.findElement(By.xpath("//*[@id=\"finish\"]")).click();
- * driver.findElement(By.xpath("//*[@id=\"back-to-products\"]")).click();
- * Thread.sleep(2000);
- * driver.findElement(By.xpath("//*[@id=\"react-burger-menu-btn\"]")).click();
- * Thread.sleep(1000);
- * driver.findElement(By.xpath("//*[contains(text(),'Logout')]")).click();
- */
+
+  driver.findElement(By.id("checkout")).click(); Thread.sleep(1000);
+  driver.findElement(By.id("first-name")).sendKeys("bini");
+  driver.findElement(By.id("last-name")).sendKeys("b");
+  driver.findElement(By.xpath("//*[@id=\"postal-code\"]")).sendKeys("695584");
+  
+  driver.findElement(By.xpath("//*[@id=\"continue\"]")).click();
+  
+  driver.findElement(By.xpath("//*[@id=\"finish\"]")).click();
+  driver.findElement(By.xpath("//*[@id=\"back-to-products\"]")).click();
+  Thread.sleep(2000);
+  driver.findElement(By.xpath("//*[@id=\"react-burger-menu-btn\"]")).click();
+  Thread.sleep(1000);
+  driver.findElement(By.xpath("//*[contains(text(),'Logout')]")).click();
+ 
  
 }}

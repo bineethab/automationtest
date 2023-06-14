@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\computer-2\AppData\Local\Temp\testng-eclipse-1515880007\testng-customsuite.xml</span>
+                    <span>C:\Users\computer-2\AppData\Local\Temp\testng-eclipse-1018008213\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">5 methods,   5 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,7 +104,27 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="automation.Saucelab" class="method navigator-link" hash-for-method="addtocart">addtocart</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="automation.Saucelab" class="method navigator-link" hash-for-method="inputvalidations(incorrectusername, standard, secret_sauce)">inputvalidations(incorrectusername, standard, secret_sauce)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="automation.Saucelab" class="method navigator-link" hash-for-method="inputvalidations(incorrectpassword, standard_user, secret)">inputvalidations(incorrectpassword, standard_user, secret)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="automation.Saucelab" class="method navigator-link" hash-for-method="inputvalidations(bothcorrect, standard_user, secret_sauce)">inputvalidations(bothcorrect, standard_user, secret_sauce)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="automation.Saucelab" class="method navigator-link" hash-for-method="inputvalidations(differentusername, problem_user, secret_sauce)">inputvalidations(differentusername, problem_user, secret_sauce)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="automation.Saucelab" class="method navigator-link" hash-for-method="inputvalidations(bothincorrect, user, user)">inputvalidations(bothincorrect, user, user)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -127,9 +147,42 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="addtocart">
-                  </a> <!-- addtocart -->
-                  <span class="method-name">addtocart</span>
+                  <a name="inputvalidations(incorrectusername, standard, secret_sauce)">
+                  </a> <!-- inputvalidations(incorrectusername, standard, secret_sauce) -->
+                  <span class="method-name">inputvalidations</span>
+                  <span class="parameters">(incorrectusername, standard, secret_sauce)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="inputvalidations(incorrectpassword, standard_user, secret)">
+                  </a> <!-- inputvalidations(incorrectpassword, standard_user, secret) -->
+                  <span class="method-name">inputvalidations</span>
+                  <span class="parameters">(incorrectpassword, standard_user, secret)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="inputvalidations(bothcorrect, standard_user, secret_sauce)">
+                  </a> <!-- inputvalidations(bothcorrect, standard_user, secret_sauce) -->
+                  <span class="method-name">inputvalidations</span>
+                  <span class="parameters">(bothcorrect, standard_user, secret_sauce)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="inputvalidations(differentusername, problem_user, secret_sauce)">
+                  </a> <!-- inputvalidations(differentusername, problem_user, secret_sauce) -->
+                  <span class="method-name">inputvalidations</span>
+                  <span class="parameters">(differentusername, problem_user, secret_sauce)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="inputvalidations(bothincorrect, user, user)">
+                  </a> <!-- inputvalidations(bothincorrect, user, user) -->
+                  <span class="method-name">inputvalidations</span>
+                  <span class="parameters">(bothincorrect, user, user)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -137,7 +190,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\computer-2\AppData\Local\Temp\testng-eclipse-1515880007\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\computer-2\AppData\Local\Temp\testng-eclipse-1018008213\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -186,16 +239,32 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(5);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'addtocart')
+data.setCell(0, 1, 'inputvalidations')
 data.setCell(0, 2, 'automation.Saucelab')
-data.setCell(0, 3, 1175);
+data.setCell(0, 3, 1493);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'inputvalidations')
+data.setCell(1, 2, 'automation.Saucelab')
+data.setCell(1, 3, 1487);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'inputvalidations')
+data.setCell(2, 2, 'automation.Saucelab')
+data.setCell(2, 3, 1461);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'inputvalidations')
+data.setCell(3, 2, 'automation.Saucelab')
+data.setCell(3, 3, 1373);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'inputvalidations')
+data.setCell(4, 2, 'automation.Saucelab')
+data.setCell(4, 3, 1349);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 seconds</span>
+              <span class="suite-total-time">Total running time: 7 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -227,8 +296,24 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
-                <span class="method-name">addtocart</span>
-                <span class="method-start">2253 ms</span>
+                <span class="method-name">inputvalidations(bothcorrect, standard_user, secret_sauce)</span>
+                <span class="method-start">2208 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">inputvalidations(bothincorrect, user, user)</span>
+                <span class="method-start">3703 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">inputvalidations(incorrectusername, standard, secret_sauce)</span>
+                <span class="method-start">5054 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">inputvalidations(incorrectpassword, standard_user, secret)</span>
+                <span class="method-start">6428 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">inputvalidations(differentusername, problem_user, secret_sauce)</span>
+                <span class="method-start">7890 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
